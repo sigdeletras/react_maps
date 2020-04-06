@@ -3,7 +3,7 @@
 Recursos sobre React y mapas
 
 ## Documentación
-- [REact](https://es.reactjs.org/)
+- [React](https://es.reactjs.org/)
 
 ## Librerías
 - [React-Leaflet](https://react-leaflet.js.org/en/) [Examples](https://react-leaflet.js.org/docs/en/examples) [npm](https://www.npmjs.com/package/react-leaflet)
