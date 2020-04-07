@@ -33,11 +33,11 @@ Recursos sobre React y mapas
 - [Build rich map experiences with Mapbox and React 🗺 🚀](https://codeburst.io/build-rich-map-experiences-with-mapbox-and-react-fa13d2c814de)
 - [How to Use Leaflet in React Applications](https://morioh.com/p/d339f90518c1)
 - [26 Map Examples with ReactJS](https://react.rocks/tag/Map)
-- [How To Create Maps With React And Leaflet — Smashing Magazin](https://www.smashingmagazine.com/2020/02/javascript-maps-react-leaflet/)
+
 
 ## Openlayer
 - [How to test Open Layers React components with Mocha (part I)](https://link.medium.com/5hpnKlvwe5)
 - [Using OpenLayers with React - Taylor Callsen](https://taylor.callsen.me/using-reactflux-with-openlayers-3-and-other-third-party-libraries/)
-- []()
-- []()
+- [Simple example of a ReactJS and OpenLayers map component](https://dominoc925.blogspot.com/2019/10/simple-example-of-reactjs-and.html?m=1)
+- [Introduction | react-geo - mapping mit React](https://terrestris.github.io/react-geo-ws/index.html)
 
