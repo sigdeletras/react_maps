@@ -19,7 +19,7 @@ Recursos sobre React y mapas
 - [Utilizando datos de reaccionar con la API de Fetch y axios – Nexstair Tecnologías](https://nexstair.com/using-data-in-react-with-the-fetch-api-and-axios/?lang=es)
 - [Fetching Data and Updating State in a React Class](https://www.pluralsight.com/guides/fetching-data-updating-state-react-class)
 - [facebook/create-react-app: Set up a modern web app by running one command](https://github.com/facebook/create-react-app)
-- - [“Map for React apps with Leaflet”](https://link.medium.com/hnOVgqt8u5) *Diferentes opciones par añadir mapas en React..leaflet, Gmaps....*
+- [“Map for React apps with Leaflet”](https://link.medium.com/hnOVgqt8u5) *Diferentes opciones par añadir mapas en React..leaflet, Gmaps....*
 
 ## Cursos a tener en cuenta
 - [React Tutorial and Projects Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?ranMID=39197&ranEAID=OHRBJGveF2s&ranSiteID=OHRBJGveF2s-7J5siV9M9OhKT59d6p19nQ&LSNPUBID=OHRBJGveF2s)
