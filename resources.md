@@ -60,5 +60,3 @@
 ](https://github.com/eugene-belkovich/react-map-with-leaflet)
 - [azavea/react-leaflet-demo](https://github.com/azavea/react-leaflet-demo)
 - [react-leaflet-sidebarv2](https://github.com/condense/react-leaflet-sidebarv2/blob/master/README.md)
-
-
