@@ -3,12 +3,12 @@ import { Map, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 class MapView extends React.Component {
-
   render() {
+    const styleMap = { "width": "100%", "height": "60vh" }
     return (
       <Map
-        style={{ "width": "100%", "height": "60vh" }}
-        center={[37.885963680860755, -4.774589538574219,]} 
+        style={styleMap}
+        center={[37.885963680860755, -4.774589538574219,]}
         zoom={12}>
 
         <TileLayer

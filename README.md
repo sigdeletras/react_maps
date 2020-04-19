@@ -1,5 +1,6 @@
 # Side Project: Desarrollo de aplicación web con React y Leaflet
 
+### Entradas
 - [Side Project: Desarrollo de aplicación web con React y Leaflet (I)](https://medium.com/@pasoriano/side-project-desarrollo-de-aplicaci%C3%B3n-web-con-react-y-leaflet-i-d13e2bbcee1c)
 
 ### Descripción del proyecto
