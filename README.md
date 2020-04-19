@@ -1,6 +1,6 @@
 # Side Project: Desarrollo de aplicación web con React y Leaflet
 
-[Abrir GeoApp](./docs/index.html) (Despliegue 19/04720)
+[Abrir GeoApp](./docs/index.html) (Despliegue 19/04/2020)
 
 ### Entradas
 - [Side Project: Desarrollo de aplicación web con React y Leaflet (I)](https://medium.com/@pasoriano/side-project-desarrollo-de-aplicaci%C3%B3n-web-con-react-y-leaflet-i-d13e2bbcee1c)
