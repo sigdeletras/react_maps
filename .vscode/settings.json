@@ -1,0 +1,4 @@
+"files.associations": {
+    // "**/components/*-component.js": "javascriptreact"
+    "*.js": "javascriptreact"
+}
