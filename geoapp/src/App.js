@@ -5,6 +5,13 @@ import SelectList from './components/SelectList/SelectList.js';
 import './App.css';
 
 class App extends React.Component {
+  
+  constructor() {
+    super()
+    this.state = {
+      coordZoom : ""
+    }
+  }
 
   render() {
     return (
