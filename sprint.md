@@ -1,21 +1,22 @@
 # Sprint 2
 
-En este segundo *sprint* del proyecto que he llamdo [Desarrollo de aplicación web con React y Leaflet]() la tarea principal ha consistido en desarrollar, mejor dicho **en aprender a desarrollar*, la siguiente historia de usuario:
+En este segundo *sprint* del proyecto que he llamdo [Desarrollo de una aplicación web con React y Leaflet]() la tarea principal ha consistido en desarrollar, mejor dicho **en aprender a desarrollar*, la siguiente historia de usuario:
 
-> *"Como usuario quiero seleccionar un muncipio de un listado de opciones, hacer click en el botón Load y ver el mapa centrado en el municipio y a una escala correcta de visualización"*
+> *"Como usuario quiero seleccionar un muncipio de un listado de opciones, hacer click en el botón y ver el mapa centrado en el municipioa una escala correcta de visualización"*
 
-La implementación de esta tarea me ha servido para adquirir los siguientes conocmientos:
+La implementación de única tarea me ha servido para adquirir los siguientes conocimientos:
 
-- Dar relevancia a saber dónde desarrollar concretamenete las funciones de la aplicación dentro del árbol de componentes,.
-- Cómo llamar una función de un componente hijo en el componente padre.
-- Aprener que, además de propiedades de tipo cadena, número, array, se puede pasar funciones a un componente.
-- Sacarle provecho a los eventos que se lanzan al cambiar un valor de *state*. Para todo esto, la función *this.setState()* de React es la clave.
-- Ir mejorando el entorno de desarrollo en VSCode con *snippets* para React con la extensión [ES7 React/Redux/GraphQL/React-Native](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets). La vida es mucho más fácil con *snippets*.	
+- Dar relevancia a saber dónde desarrollar incluir las funciones de la aplicación dentro del árbol de componentes.
+- Cómo establecer la comunicación entre un componente hijo en el componente padre para ejecutar funciones.
+- Aprender que se puede pasar funciones a un componente en la sus propiedades.
+- Sacarle provecho a los eventos que se lanzan al cambiar un valor de *state*. Para todo esto, la función *this.setState()* de React es clave.
+- Ir mejorando el entorno de desarrollo en VSCode con *snippets* para React con la extensión [ES7 React/Redux/GraphQL/React-Native](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets). La vida es mucho más fácil con *snippets* 👌	
 
+![react_snippet.gif](img/react_snippet.gif)
 
 ## Pasando propiedades entre componentes Padre-Hijo
 
-En el código del componente *Mapview* se habían definido los valores por defecto del mapa y el zum inical.
+En el código del componente *Mapview* se habían definido los valores por defecto del mapa y el zum (...sí, sí [zum](https://dle.rae.es/zum) según la RAE) inical.
 
 ```javascript
 //MapView.js
@@ -89,7 +90,7 @@ class App extends React.Component {
   }
 ...
 ```
-Aa continuación, esta función se pasa como propiedad en la instancia *SelectList* que es donde se encuentra el botón que la ejecutará.
+A continuación, esta función se pasa como propiedad en la instancia *SelectList* que es donde se encuentra el botón que la ejecutará.
 
 ![selectList_button_clic.png](img/selectList_button_clic.png)
 
@@ -99,9 +100,8 @@ Una vez salvado cambios ya tendremos disponible esta nueva funcionalidad de nues
 
 ![change_task.gif](img/change_task.gif)
 
-## Resumen de tareas realizadas en el Sprint #1
+## Resumen de <s>tareas realizadas</s> tarea realizada en el Sprint #2
 
-![00_01_sprint.png](/images/blog/202004_react_leaflet_2/00_01_sprint.png)
 ![trello_2sprint.png](img/trello_2sprint.png)
 
 ## Hilo de entradas
