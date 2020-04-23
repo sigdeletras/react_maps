@@ -6,10 +6,11 @@ class MapView extends React.Component {
   render() {
     const styleMap = { "width": "100%", "height": "60vh" }
     return (
+     
       <Map
         style={styleMap}
-        center={[37.885963680860755, -4.774589538574219,]}
-        zoom={12}>
+        center={this.props.coordCenter}
+        zoom={this.props.zoom}>
 
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
