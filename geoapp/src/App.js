@@ -1,8 +1,9 @@
 import React from 'react';
-import MapView from './components/MapView/MapView.js'
-import SelectList from './components/SelectList/SelectList.js';
+import MapView from './components/MapView/MapView'
+import SelectList from './components/SelectList/SelectList';
 
 import './App.css';
+
 
 export default class App extends React.Component {
 
@@ -12,6 +13,8 @@ export default class App extends React.Component {
       coordCenter: [37.885963680860755, -4.774589538574219],
       munipalityName: '',
       zoom: 9,
+      geodata: [],
+      code:''
     }
     this.munipalityChange = this.munipalityChange.bind(this)
   }
@@ -22,11 +25,32 @@ export default class App extends React.Component {
       coordCenter: [aData[0], aData[1]],
       munipalityName: aData[2],
       zoom: 14,
+      code: aData[3]
+      // geodata: this.getData(aData[3]),
     });
+
+    this.getData(aData[3])
+   
+   
   }
 
 
+  async getData (code) {
+    const URL = `http://www.ideandalucia.es/dea100/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=dea100:sv03_sas&MAXFEATURES=10&outputFormat=application/json&filter=<Filter><PropertyIsEqualTo><PropertyName>codmun</PropertyName><Literal>${code}</Literal></PropertyIsEqualTo></Filter>&SRSNAME=EPSG:4326`
+
+    const res =  await fetch(URL)
+    const data = await res.json();
+
+    this.setState({
+      geodata: data
+    
+  })
+  // console.log(this.state);
+}
+
+
   render() {
+
     return (
       <div className="container-fluid">
         {/* Title */}
@@ -44,8 +68,13 @@ export default class App extends React.Component {
             </div>
           </div>
           {/* Map */}
+     
           <div className="col-sm-8 col-sm-offset-4 col-md-10 col-md-offset-3">
-            <MapView coordCenter={this.state.coordCenter} zoom={this.state.zoom} />
+          {/* {!isLoaded &&  <h2>  No cargado   </h2>} */}
+            <MapView coordCenter={this.state.coordCenter} 
+            zoom={this.state.zoom} 
+            geodata={this.state.geodata} 
+            code={this.state.code}/>
           </div>
         </div>
 

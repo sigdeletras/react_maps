@@ -24,7 +24,7 @@ export default class SelectList extends React.Component {
                 <select className="form-control" onChange={this.selectListChange}>
                     <option value="">Select one...</option>
                     {data.map((m) =>
-                        <option key={m.id} value={[m.coordinates, m.name]}>{m.name}</option>
+                        <option key={m.id} value={[m.coordinates, m.name, m.code]}>{m.name}</option>
                     )}
                 </select>
                 <button className="btn btn-primary mt-3 mb-3"
