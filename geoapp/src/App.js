@@ -4,7 +4,6 @@ import SelectList from './components/SelectList/SelectList';
 
 import './App.css';
 
-
 export default class App extends React.Component {
 
   constructor() {
@@ -14,9 +13,18 @@ export default class App extends React.Component {
       munipalityName: '',
       zoom: 9,
       geodata: [],
-      code:''
+      code: ''
     }
     this.munipalityChange = this.munipalityChange.bind(this)
+  }
+
+  async getWFSData(code) {
+    const URL = `http://www.ideandalucia.es/dea100/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=dea100:sv03_sas&MAXFEATURES=10&outputFormat=application/json&filter=<Filter><PropertyIsEqualTo><PropertyName>codmun</PropertyName><Literal>${code}</Literal></PropertyIsEqualTo></Filter>&SRSNAME=EPSG:4326`
+    const res = await fetch(URL)
+    const data = await res.json();
+    this.setState({
+      geodata: data
+    })
   }
 
   munipalityChange = (data) => {
@@ -26,31 +34,11 @@ export default class App extends React.Component {
       munipalityName: aData[2],
       zoom: 14,
       code: aData[3]
-      // geodata: this.getData(aData[3]),
     });
-
-    this.getData(aData[3])
-   
-   
+    this.getWFSData(aData[3])
   }
 
-
-  async getData (code) {
-    const URL = `http://www.ideandalucia.es/dea100/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=dea100:sv03_sas&MAXFEATURES=10&outputFormat=application/json&filter=<Filter><PropertyIsEqualTo><PropertyName>codmun</PropertyName><Literal>${code}</Literal></PropertyIsEqualTo></Filter>&SRSNAME=EPSG:4326`
-
-    const res =  await fetch(URL)
-    const data = await res.json();
-
-    this.setState({
-      geodata: data
-    
-  })
-  // console.log(this.state);
-}
-
-
   render() {
-
     return (
       <div className="container-fluid">
         {/* Title */}
@@ -68,13 +56,14 @@ export default class App extends React.Component {
             </div>
           </div>
           {/* Map */}
-     
+
           <div className="col-sm-8 col-sm-offset-4 col-md-10 col-md-offset-3">
-          {/* {!isLoaded &&  <h2>  No cargado   </h2>} */}
-            <MapView coordCenter={this.state.coordCenter} 
-            zoom={this.state.zoom} 
-            geodata={this.state.geodata} 
-            code={this.state.code}/>
+            {/* {!isLoaded &&  <h2>  No cargado   </h2>} */}
+            <MapView coordCenter={this.state.coordCenter}
+              zoom={this.state.zoom}
+              geodata={this.state.geodata}
+              code={this.state.code}>
+            </MapView>
           </div>
         </div>
 
