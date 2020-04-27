@@ -78,31 +78,114 @@ Para la obtención de los datos desde el WFS de la Junta de Andalucía, creamos 
 ## Nuevo componente MapLayer para gestionar los datos geográficos
 
 
-https://github.com/LiveBy/react-leaflet-choropleth/issues/3
-https://github.com/open-austin/austingreenmap/blob/9b0d9ad5ddc245c07c63ab7d2997e74328d73259/client/js/components/ParksMap.jsx
-
 La funcionalidad está desarrollada dentro de un nuevo componente llamado *Maplayer*. Con la librería React-Leaflet tenemos accesible el [componente GeoJSON](https://react-leaflet.js.org/docs/en/components#geojson) que implementa el [código de la API de Leaflet](https://leafletjs.com/reference-1.6.0.html#geojson) la opción de añadir capas de datos vectoriales en este formato.
 
 Para poder usar el icono que viene por defecto en Leaflet he tenido que incorporalo en el compomenente.
 
 ![03_icon_lealfet.png][img/03_icon_lealfet.png]
 
-Este componente es usado dentro de *MapView* y obteniene los datos desde 
+Este componente será usado en *MapView* y usa los datos que le pasamos en sus propiedades
 
-Problemas 
+### Ref y ciclos de vida
 
-## Ref y ciclos de vida
+Despúes de alguna que otra búsqueda [aquí](https://github.com/LiveBy/react-leaflet-choropleth/issues/3) y [aquí](https://github.com/open-austin/austingreenmap/blob/9b0d9ad5ddc245c07c63ab7d2997e74328d73259/client/js/components/ParksMap.jsx), logré conseguir que se cargaran "pintaran" los datos al cambiar del municipio. 
 
+Según la documentación de la librería, alguno de los componentes no se actualizan cuando cambian después de que el componente es montado. Este el el caso del componente GeoJSON. Para que esta opción funciones debemos acceder directamente al elemento Leaflet usado *this.leafletElement* y usando las [referencias de React](https://es.reactjs.org/docs/refs-and-the-dom.html). Gracias a las refencias a terceros accederemos al DOM de Leaflet.
 
-## Popups
+Hechas la referencia, ahora debemos usar las funciones de la librería en los métodos del ciclo de vida del componente:
+- componentWillReceiveProps(prevProps). Este método no se ejecutará una vez se monte el componente, si no que se esperará a recibir nuevas props de un componente padre para ejecutarse. Lo usaremos para limpiar las capas si los datos recibidos son distintos.
+- componentDidUpdate(prevProps). Es invocado inmediatamente después de que el componente se haya actualizado. Dentro se añadirán los datos para el GeoJSON que obitenemos al realizar la consulta a la API.
+
+```javascript
+//MapLayer.js
+...
+export default class MapLayer extends Component {
+
+    leafletRef = React.createRef();
+
+    componentWillReceiveProps(prevProps) {
+        if (prevProps.data !== this.props.data) {
+            this.leafletRef.current.leafletElement.clearLayers();
+        }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.data !== this.props.data) {
+            this.leafletRef.current.leafletElement.addData(this.props.data);
+        }
+    }
+...
+```
+Para terminar tenemos que pasar como propiedad la referencia creada
+
+```javascript
+//MapLayer.js
+...
+render() {
+        return <GeoJSON
+        data = { this.props.data }
+        ref = { this.leafletRef }
+        onEachFeature = { this.onEachFeature }
+        />
+    }
+..
+```
+
+### Popups
+
+Para terminar el componente se incorpora la función *onEachFeature()* que permite ofrecer información del punto en un *popup*.
+
+![03_popup.png](img/03_popup.png)
 
 ## LayerControl
 
-Nuevas capa WMS
+Vamos a darle más funcionalidades a nuestra aplicación de mapas. Para poder ver los datos sobre distintos mapas base, se añadido un compomente de control de capas en *MapView*. Dentro del mismo seguimos manteniendo la base de OpenStreetMap, pero añadimos la ortofotografía del PNOA como capa WMS
+
+```javascript
+    return (
+      <div>
+        <Map
+          style={styleMap}
+          center={this.props.coordCenter}
+          zoom={this.props.zoom}>
+
+          <LayersControl position="topright">
+
+            <BaseLayer checked name="OpenStreetMap">
+              <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+            </BaseLayer>
+
+            <BaseLayer name="PNOA">
+              <WMSTileLayer
+                layers={'OI.OrthoimageCoverage'}
+                attribution='&copy; <a href="https://pnoa.ign.es/">IGN</a>'
+                url="http://www.ign.es/wms-inspire/pnoa-ma?"
+              />
+            </BaseLayer>
+
+            <Overlay checked name="Servicios Sanitarios (DERA)">
+              <MapLayer data={this.props.geodata} />
+            </Overlay>
+
+          </LayersControl>
+
+        </Map>
+      </div>
+    )
+
+  }
+```
+
+Tras el desarrollo de las nuevas tareas esta es nuetra aplición web hasta el momento.
+
+![03_sprint3.gif](img/03_sprint3.gif)
 
 ## Resumen de  tareas realizadas en el Sprint #3
 
-![trello_2sprint.png](img/trello_2sprint.png)
+![03_trello.png](img/03_trello.png)
 
 ## Hilo de entradas
 
