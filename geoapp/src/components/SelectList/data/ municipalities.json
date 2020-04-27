@@ -1,16 +1,694 @@
 [{
-    "id": 1,
-    "name": "Lucena",
-    "coordinates": [37.41005076407196, -4.486455917358398],
-    "code": "14038"
-}, {
-    "id": 2,
-    "name": "Montilla",
-    "coordinates": [37.586758481479116, -4.637689590454102],
-    "code": "14042"
-}, {
-    "id": 3,
-    "name": "Montoro",
-    "coordinates": [38.02551215000266, -4.383244514465331],
-    "code": "14043"
-}]
+        "id": 1,
+        "name": "Adamuz",
+        "codprov": 14,
+        "code": 14001,
+        "coordinates": [
+            38.02512572, -4.52617749
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Aguilar de la Frontera",
+        "codprov": 14,
+        "code": 14002,
+        "coordinates": [
+            37.52004219, -4.66061547
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Alcaracejos",
+        "codprov": 14,
+        "code": 14003,
+        "coordinates": [
+            38.38656136, -4.96709118
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Aldea de Fuente Carreteros",
+        "codprov": 14,
+        "code": 14901,
+        "coordinates": [
+            37.66907784, -5.155460537
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Almedinilla",
+        "codprov": 14,
+        "code": 14004,
+        "coordinates": [
+            37.43947257, -4.09001992
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Almodóvar del Río",
+        "codprov": 14,
+        "code": 14005,
+        "coordinates": [
+            37.80943577, -5.02076595
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Añora",
+        "codprov": 14,
+        "code": 14006,
+        "coordinates": [
+            38.41255111, -4.89754391
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Baena",
+        "codprov": 14,
+        "code": 14007,
+        "coordinates": [
+            37.61318847, -4.32895878
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Belalcázar",
+        "codprov": 14,
+        "code": 14008,
+        "coordinates": [
+            38.57840844, -5.16635159
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Belmez",
+        "codprov": 14,
+        "code": 14009,
+        "coordinates": [
+            38.2732496, -5.20945663
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Benamejí",
+        "codprov": 14,
+        "code": 14010,
+        "coordinates": [
+            37.26716339, -4.53987316
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Bujalance",
+        "codprov": 14,
+        "code": 14012,
+        "coordinates": [
+            37.89649386, -4.38339381
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Cabra",
+        "codprov": 14,
+        "code": 14013,
+        "coordinates": [
+            37.47101586, -4.44656669
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Cañete de las Torres",
+        "codprov": 14,
+        "code": 14014,
+        "coordinates": [
+            37.86729904, -4.31772885
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Carcabuey",
+        "codprov": 14,
+        "code": 14015,
+        "coordinates": [
+            37.44453021, -4.27306704
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Cardeña",
+        "codprov": 14,
+        "code": 14016,
+        "coordinates": [
+            38.27037293, -4.32426689
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Castro del Río",
+        "codprov": 14,
+        "code": 14019,
+        "coordinates": [
+            37.69040121, -4.48168693
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Conquista",
+        "codprov": 14,
+        "code": 14020,
+        "coordinates": [
+            38.40958084, -4.50055371
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Córdoba",
+        "codprov": 14,
+        "code": 14021,
+        "coordinates": [
+            37.87954225, -4.78032455
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Doña Mencía",
+        "codprov": 14,
+        "code": 14022,
+        "coordinates": [
+            37.55542058, -4.3594167
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Dos Torres",
+        "codprov": 14,
+        "code": 14023,
+        "coordinates": [
+            38.44549239, -4.89495696
+        ]
+    },
+    {
+        "id": 22,
+        "name": "El Carpio",
+        "codprov": 14,
+        "code": 14018,
+        "coordinates": [
+            37.94050285, -4.49948242
+        ]
+    },
+    {
+        "id": 23,
+        "name": "El Guijo",
+        "codprov": 14,
+        "code": 14034,
+        "coordinates": [
+            38.49620069, -4.78336513
+        ]
+    },
+    {
+        "id": 24,
+        "name": "El Viso",
+        "codprov": 14,
+        "code": 14074,
+        "coordinates": [
+            38.48377684, -4.95549169
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Encinas Reales",
+        "codprov": 14,
+        "code": 14024,
+        "coordinates": [
+            37.27334279, -4.48724904
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Espejo",
+        "codprov": 14,
+        "code": 14025,
+        "coordinates": [
+            37.68083913, -4.55377679
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Espiel",
+        "codprov": 14,
+        "code": 14026,
+        "coordinates": [
+            38.18906775, -5.01731472
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Fernán-Núñez",
+        "codprov": 14,
+        "code": 14027,
+        "coordinates": [
+            37.66833878, -4.71932943
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Fuente la Lancha",
+        "codprov": 14,
+        "code": 14028,
+        "coordinates": [
+            38.42211433, -5.04888706
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Fuente Obejuna",
+        "codprov": 14,
+        "code": 14029,
+        "coordinates": [
+            38.26702154, -5.41923282
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Fuente Palmera",
+        "codprov": 14,
+        "code": 14030,
+        "coordinates": [
+            37.70323501, -5.10411463
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Fuente-Tójar",
+        "codprov": 14,
+        "code": 14031,
+        "coordinates": [
+            37.50974593, -4.14651434
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Guadalcázar",
+        "codprov": 14,
+        "code": 14033,
+        "coordinates": [
+            37.75846258, -4.94537097
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Hinojosa del Duque",
+        "codprov": 14,
+        "code": 14035,
+        "coordinates": [
+            38.50061616, -5.14848249
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Hornachuelos",
+        "codprov": 14,
+        "code": 14036,
+        "coordinates": [
+            37.83117536, -5.24226581
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Iznájar",
+        "codprov": 14,
+        "code": 14037,
+        "coordinates": [
+            37.25784671, -4.30793236
+        ]
+    },
+    {
+        "id": 37,
+        "name": "La Carlota",
+        "codprov": 14,
+        "code": 14017,
+        "coordinates": [
+            37.67519215, -4.93225379
+        ]
+    },
+    {
+        "id": 38,
+        "name": "La Granjuela",
+        "codprov": 14,
+        "code": 14032,
+        "coordinates": [
+            38.3699257, -5.35167331
+        ]
+    },
+    {
+        "id": 39,
+        "name": "La Guijarrosa",
+        "codprov": 14,
+        "code": 14902,
+        "coordinates": [
+            37.63648413, -4.86509246
+        ]
+    },
+    {
+        "id": 40,
+        "name": "La Rambla",
+        "codprov": 14,
+        "code": 14057,
+        "coordinates": [
+            37.60858832, -4.74076968
+        ]
+    },
+    {
+        "id": 41,
+        "name": "La Victoria",
+        "codprov": 14,
+        "code": 14065,
+        "coordinates": [
+            37.68081318, -4.85258274
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Los Blázquez",
+        "codprov": 14,
+        "code": 14011,
+        "coordinates": [
+            38.406797, -5.43808665
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Lucena",
+        "codprov": 14,
+        "code": 14038,
+        "coordinates": [
+            37.40901404, -4.48451348
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Luque",
+        "codprov": 14,
+        "code": 14039,
+        "coordinates": [
+            37.55956888, -4.27765852
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Montalbán de Córdoba",
+        "codprov": 14,
+        "code": 14040,
+        "coordinates": [
+            37.58273217, -4.74928409
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Montemayor",
+        "codprov": 14,
+        "code": 14041,
+        "coordinates": [
+            37.64747277, -4.69899102
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Montilla",
+        "codprov": 14,
+        "code": 14042,
+        "coordinates": [
+            37.59232558, -4.63785702
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Montoro",
+        "codprov": 14,
+        "code": 14043,
+        "coordinates": [
+            38.02639376, -4.38130891
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Monturque",
+        "codprov": 14,
+        "code": 14044,
+        "coordinates": [
+            37.47356745, -4.58088184
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Moriles",
+        "codprov": 14,
+        "code": 14045,
+        "coordinates": [
+            37.43498961, -4.60916325
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Nueva Carteya",
+        "codprov": 14,
+        "code": 14046,
+        "coordinates": [
+            37.58553839, -4.46660548
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Obejo",
+        "codprov": 14,
+        "code": 14047,
+        "coordinates": [
+            38.13442999, -4.80059964
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Palenciana",
+        "codprov": 14,
+        "code": 14048,
+        "coordinates": [
+            37.24883679, -4.58251386
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Palma del Río",
+        "codprov": 14,
+        "code": 14049,
+        "coordinates": [
+            37.70113499, -5.28521754
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Pedro Abad",
+        "codprov": 14,
+        "code": 14050,
+        "coordinates": [
+            37.96637631, -4.45502044
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Pedroche",
+        "codprov": 14,
+        "code": 14051,
+        "coordinates": [
+            38.42795152, -4.76362098
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Peñarroya-Pueblonuevo",
+        "codprov": 14,
+        "code": 14052,
+        "coordinates": [
+            38.29876873, -5.26610998
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Posadas",
+        "codprov": 14,
+        "code": 14053,
+        "coordinates": [
+            37.80042527, -5.10716405
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Pozoblanco",
+        "codprov": 14,
+        "code": 14054,
+        "coordinates": [
+            38.37888591, -4.84958064
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Priego de Córdoba",
+        "codprov": 14,
+        "code": 14055,
+        "coordinates": [
+            37.43981618, -4.191759
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Puente Genil",
+        "codprov": 14,
+        "code": 14056,
+        "coordinates": [
+            37.3883058, -4.77225259
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Rute",
+        "codprov": 14,
+        "code": 14058,
+        "coordinates": [
+            37.32526431, -4.37022684
+        ]
+    },
+    {
+        "id": 63,
+        "name": "San Sebastián de los Ballesteros",
+        "codprov": 14,
+        "code": 14059,
+        "coordinates": [
+            37.65457388, -4.82514553
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Santa Eufemia",
+        "codprov": 14,
+        "code": 14061,
+        "coordinates": [
+            38.59608265, -4.90500504
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Santaella",
+        "codprov": 14,
+        "code": 14060,
+        "coordinates": [
+            37.56749755, -4.84662658
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Torrecampo",
+        "codprov": 14,
+        "code": 14062,
+        "coordinates": [
+            38.47447529, -4.68026045
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Valenzuela",
+        "codprov": 14,
+        "code": 14063,
+        "coordinates": [
+            37.77497124, -4.21935803
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Valsequillo",
+        "codprov": 14,
+        "code": 14064,
+        "coordinates": [
+            38.40505636, -5.35173539
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Villa del Río",
+        "codprov": 14,
+        "code": 14066,
+        "coordinates": [
+            37.98234127, -4.29093006
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Villafranca de Córdoba",
+        "codprov": 14,
+        "code": 14067,
+        "coordinates": [
+            37.96233796, -4.54554878
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Villaharta",
+        "codprov": 14,
+        "code": 14068,
+        "coordinates": [
+            38.1396903, -4.90308829
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Villanueva de Córdoba",
+        "codprov": 14,
+        "code": 14069,
+        "coordinates": [
+            38.32241888, -4.62846311
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Villanueva del Duque",
+        "codprov": 14,
+        "code": 14070,
+        "coordinates": [
+            38.39272715, -4.99945439
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Villanueva del Rey",
+        "codprov": 14,
+        "code": 14071,
+        "coordinates": [
+            38.20045817, -5.15082199
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Villaralto",
+        "codprov": 14,
+        "code": 14072,
+        "coordinates": [
+            38.45542319, -4.98421173
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Villaviciosa de Córdoba",
+        "codprov": 14,
+        "code": 14073,
+        "coordinates": [
+            38.07637233, -5.0146828
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Zuheros",
+        "codprov": 14,
+        "code": 14075,
+        "coordinates": [
+            37.54383838, -4.31649861
+        ]
+    }
+]
