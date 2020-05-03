@@ -1,25 +1,30 @@
 # Sprint 3
 
-Tareas implementadas
+Vamos con el tercer *sprint* de este **proyecto para crear una aplicación de mapas con la librería React**. Como vamos comentando desde la primera entrada definimos un conjunto de "tareas" cerradas que definirían el alcance la aplicación. En esta ocasión, le hemos dado un buen impulso a nuestra *backlog*.
 
-- 11 Conexión WFS
-- 12 Consulta WFS por muncipio
-- 13 Datos WFS en Mapa
-- 15 consulta datos en mapa
+Las tareas finalizadas son las siguientes
+
+- 11 Conexión a servicio WFS.
+- 12 Consulta WFS por muncipio.
+- 13 Datos WFS en Mapa.
+- 15 Consulta datos en mapa (popup).
+- 23 Añadir capas WMS y gestión con LayerControl.
 
 
-Conocimientos adquiridos
-- ref
+Centrándome en los temas aprendidos sobre React a partir del desarrollo de estas tareas, los temas vistos son:
 
-## API fetch (ES6)
+- La gestión de forma asíncrona de peticiones/respuestas a servicios WFS usando fetch.
+- El uso de referencias y métodos de cliclo de vida en Reat.
+- Nuevos componentes de la librería React-Leaflet.
 
-Petición a un servicio WFS.
-Qué son los servicios WFS
-Explicación mejor acceso a la entrada
-Captura de Postman
-CORS complemento
+## Petición de datos a un servicio WFS
 
-Uso de extensión de Chrome
+Dentro del ámbito del acceso a datos geográficos por Internet, se encuentra extendido el consumo mediante servicios OGC. Dentro de estos servicios estándares, el conocido como Web Feature Service (WFS) ofrece una interfaz de comunicación que permite consultar o descargar, y en menor medida editar objetos geográficos. En la la entrada titulada ["Acceso a servicios OGC (WMS,WFS..) con Postman"](http://www.sigdeletras.com/2019/acceso-a-servicios-ogc-con-postman/) tengo desarrollado algunos de estos aspectos.
+Hay una gran cantidad de datos que pueden consumirse no solo con un SIG de escritorio, sino también mediante una aplicación web. Sirva come ejemplo la [recopilación de servicios de descargas en la web de la IDE España](https://www.idee.es/es_ES/web/guest/directorio-de-servicios?p_p_id=DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_DIRSRVIDEE_WAR_DIRSRVIDEEportlet_INSTANCE_KXnVu4qMJc1J_descSrv=DESCARGA).
+
+Para el proyecto voy a usar los datos de Servicios de Salud del [WFS de los Datos Espaciales de Rerencia de Andalucía (DERA)](http://www.juntadeandalucia.es/institutodeestadisticaycartografia/DERA/servicios.htm).  En esta capa se encuentran la *"distribución de los equipamientos sanitarios públicos y privados integrados en el Sistema Sanitario Público de Andalucía"*
+
+## Petición de datos con API fetch
 
 En primer lugar hemos añadidos dos nuevos valores en *state* para *App*
 
@@ -74,9 +79,9 @@ Para la obtención de los datos desde el WFS de la Junta de Andalucía, creamos 
   render() {
 ...
 ```
+Tengo que comentar que ya que estoy trabajando con el servidor de desarrollo que me crea la extensión [create-react-app](https://github.com/facebook/create-react-app) he tenido que solucionar el tema de CORS usando la extensión [Alow CORS](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) de Chrome.
 
 ## Nuevo componente MapLayer para gestionar los datos geográficos
-
 
 La funcionalidad está desarrollada dentro de un nuevo componente llamado *Maplayer*. Con la librería React-Leaflet tenemos accesible el [componente GeoJSON](https://react-leaflet.js.org/docs/en/components#geojson) que implementa el [código de la API de Leaflet](https://leafletjs.com/reference-1.6.0.html#geojson) la opción de añadir capas de datos vectoriales en este formato.
 
@@ -133,13 +138,13 @@ render() {
 
 ### Popups
 
-Para terminar el componente se incorpora la función *onEachFeature()* que permite ofrecer información del punto en un *popup*.
+Terminamos el componente incorporando la función *onEachFeature()* que permite ofrecer información del punto en un *popup*.
 
 ![03_popup.png](img/03_popup.png)
 
 ## LayerControl
 
-Vamos a darle más funcionalidades a nuestra aplicación de mapas. Para poder ver los datos sobre distintos mapas base, se añadido un compomente de control de capas en *MapView*. Dentro del mismo seguimos manteniendo la base de OpenStreetMap, pero añadimos la ortofotografía del PNOA como capa WMS
+Vamos a darle más funcionalidades a nuestra aplicación de mapas. Para poder ver los datos sobre distintos mapas base, he incorporado el compomente de control de capas *LayersControl* en *MapView*. Dentro del mismo seguimos manteniendo la base de OpenStreetMap y añadimos la ortofotografía del PNOA como capa WMS.
 
 ```javascript
     return (
