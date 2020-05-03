@@ -2,6 +2,8 @@
 
 Vamos con el tercer *sprint* de este [**proyecto para crear una aplicación de mapas con la librería React**](http://www.sigdeletras.com/2020/side-project-desarrollo-de-aplicacion-web-con-react-y-leaflet-i/). Como vamos comentando desde la primera entrada definimos un conjunto de "tareas" cerradas que definirían el alcance la aplicación. En esta ocasión, le he dado un buen impulso a nuestra *backlog*.
 
+![react.png](img/react.png)
+
 Las tareas finalizadas son las siguientes
 
 - 11 Conexión a servicio WFS.
