@@ -13,14 +13,9 @@ export default class MapLayer extends Component {
 
     leafletRef = React.createRef();
 
-    componentWillReceiveProps(prevProps) {
-        if (prevProps.data !== this.props.data) {
-            this.leafletRef.current.leafletElement.clearLayers();
-        }
-    }
-
     componentDidUpdate(prevProps) {
         if (prevProps.data !== this.props.data) {
+            this.leafletRef.current.leafletElement.clearLayers();
             this.leafletRef.current.leafletElement.addData(this.props.data);
         }
     }
