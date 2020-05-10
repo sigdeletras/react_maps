@@ -1,6 +1,7 @@
 import React from 'react';
 import MapView from './components/MapView/MapView'
 import SelectList from './components/SelectList/SelectList';
+import TableList from './components/TableList/TableList'
 
 import './App.css';
 
@@ -39,6 +40,12 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    const mystyle = {
+      height: "230px",
+      overflow: "auto",
+    };
+
     return (
       <div className="container-fluid">
         {/* Title */}
@@ -58,7 +65,6 @@ export default class App extends React.Component {
           {/* Map */}
 
           <div className="col-sm-8 col-sm-offset-4 col-md-10 col-md-offset-3">
-            {/* {!isLoaded &&  <h2>  No cargado   </h2>} */}
             <MapView coordCenter={this.state.coordCenter}
               zoom={this.state.zoom}
               geodata={this.state.geodata}
@@ -68,36 +74,12 @@ export default class App extends React.Component {
         </div>
 
         {/* Table */}
-        <div className="row m-3">
-          <div className="col">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Type</th>
-                  <th>Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Type 1</td>
-                  <td>Álvaro</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Type 2</td>
-                  <td>name 2</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Type 1</td>
-                  <td>name 3</td>
-                </tr>
-              </tbody>
-            </table>
+        <div  style = {mystyle} className="row m-3">
+          <div  className="col">
+            <TableList data={this.state.geodata} />
           </div>
         </div>
+
       </div>
     )
   }
