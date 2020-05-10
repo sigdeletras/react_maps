@@ -22,9 +22,9 @@ export default class MapLayer extends Component {
 
     onEachFeature(feature, layer) {
         const popupContent = `<Popup>
-                                    <pre>Centro: ${feature.properties.centro}</pre>
-                                    <pre>Tipo: ${feature.properties.tipocentro}</pre>
-                                    <pre>Titularidad: ${feature.properties.titularida}</pre>
+                                    <p>Centro: ${feature.properties.centro}</p>
+                                    <p>Tipo: ${feature.properties.tipocentro}</p>
+                                    <p>Titularidad: ${feature.properties.titularida}</p>
                                 </Popup>`
         layer.bindPopup(popupContent)
     }
