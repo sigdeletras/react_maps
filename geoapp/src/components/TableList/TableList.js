@@ -1,57 +1,5 @@
 import React, { Component } from "react";
 import PubSub from "pubsub-js";
-// import  './TableList.css';
-
-const TableHeader = (props) => {
-  if (props) {
-    let features = props.features;
-    if (features) {
-      let rowName = "";
-      features.map((f) => {
-        rowName = Object.keys(f.properties);
-      });
-
-      return (
-        <thead>
-          <tr>
-            <th> </th>
-            {rowName.map((th) => (
-              <th> {th.toUpperCase()} </th>
-            ))}
-          </tr>
-        </thead>
-      );
-    }
-  }
-};
-
-const TableRows = (props) => {
-  if (props) {
-    let features = props.features;
-    if (features) {
-      let row = "";
-      features.map((f) => {
-        row = Object.values(f.properties);
-      });
-
-      return (
-        <tbody>
-          {features &&
-            features.map((f) => (
-              <tr key={f.id}>
-                <td>
-                  <ButtonZoom coor={f.geometry.coordinates} />
-                </td>
-                {row.map((td) => (
-                  <td> {td} </td>
-                ))}
-              </tr>
-            ))}
-        </tbody>
-      );
-    }
-  }
-};
 
 class ButtonZoom extends Component {
   zoomFeatrue = () => {
@@ -68,11 +16,8 @@ class ButtonZoom extends Component {
     );
   }
 }
-
 export default class TableList extends Component {
-
   render() {
-
     const { features } = this.props.data;
 
     if (!features) {
@@ -84,11 +29,29 @@ export default class TableList extends Component {
       );
     } else {
       return (
-        <table  className="table table-striped">
-          <TableHeader features={features} /> 
-          <TableRows features={features} />
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th> </th>
+              <th>CODMUN</th>
+              <th>CENTRO</th>
+              <th>TIPO CENTRO</th>
+              <th>TITULARIDAD</th>
+            </tr>
+          </thead>
+          <tbody>
+            {features &&
+              features.map((f) => (
+                <tr key={f.id}>
+                  <td> <ButtonZoom coor={f.geometry.coordinates} /> </td>
+                  <td> {f.properties.codmun} </td>
+                  <td> {f.properties.centro} </td>
+                  <td> {f.properties.tipocentro} </td>
+                  <td> {f.properties.titularida} </td>
+                </tr>
+              ))}
+          </tbody>
         </table>
-        
       );
     }
   }
