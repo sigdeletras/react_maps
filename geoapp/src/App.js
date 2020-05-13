@@ -51,7 +51,8 @@ export default class App extends React.Component {
         {/* Title */}
         <div className="row m-3">
           <div className="col-12">
-            <h1 className="text-center">GeoApp</h1>
+            <h2 className="text-center">GeoApp :: React</h2>
+            <h4 className="text-center">Sanitary Facilities (Cordoba, Spain)</h4>
           </div>
         </div>
 
